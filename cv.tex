@@ -1,0 +1,150 @@
+% xelatex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault,lf]{carlito}
+\usepackage{metalogo}
+\usepackage{xifthen}
+\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}
+\urlstyle{sf}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+%% The 'lf' option for lining figures
+%% The 'sfdefault' option to make the base font sans serif
+
+\titleformat{\part}{\Huge\sf\filcenter}{}{1em}{}
+\titleformat{\section}[hang]{\Large\sf\raggedright}{}{0.5em}{}[{\titlerule[1pt]}]
+\titlespacing{\section}{0}{3pt}{12pt}
+\titleformat{\subsection}{\large\bfseries\centering}{}{0em}{\underline}%[\rule{3cm}{.2pt}]
+\titlespacing{\subsection}{0pt}{7pt}{7pt}
+
+% Your name goes here:
+\author{Tom Oliver}
+
+% Update date set to last compile:
+\date{\today}
+
+% Custom title command.
+\renewcommand{\maketitle}{
+	\hspace{.25\textwidth}
+	\begin{minipage}[t]{.5\textwidth}
+  \par{\centering{\Huge  \sffamily{\theauthor}}\par}
+	\end{minipage}
+}
+
+% Making the \entry command
+\newcommand{\entry}[4]{
+\ifthenelse{\isempty{#3}}
+{\slimentry{#1}{#2}}{
+
+\begin{minipage}[t]{.15\linewidth}
+\hfill \textsf{#1}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{.80\linewidth}
+{\sf#2}\\\textsf{#3} \footnotesize{#4}
+\end{minipage}\\
+\vspace{.2cm}
+}}
+
+\newcommand{\slimentry}[2]{
+
+\begin{minipage}[t]{.15\linewidth}
+\hfill \textsf{#1}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{.80\linewidth}
+  \textsf{#2}
+\end{minipage}\\
+\vspace{.25cm}
+}% end \entry command definition
+
+
+
+\begin{document}
+
+\maketitle
+
+\section{Basic Info}
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rp{.75\linewidth}}
+	\baselineskip=20pt
+  \href{mailto:tomorevilo@gmail.com}{\url{tomorevilo@gmail.com}}\\
+\end{tabular}
+\end{minipage}
+\begin{minipage}[t]{.5\linewidth}
+\begin{tabular}{rl}
+  \href{https://github.com/revilotom}{\url{https://github.com/revilotom}}\\
+\end{tabular}
+\end{minipage}
+
+\sf
+\begin{itemize}
+
+\item Skilled Software Engineer with over 3 years experience in industry.
+\item Specialised in front-end development (React)
+\item Strong Computer Science fundamentals
+\item Passoinate advocator of functional clean code that is robust and easy to test.
+\item Excels at creating efficient workflows and improving existing systems.
+
+\end{itemize}
+
+\section{Professional Experience}
+
+\entry{2022}
+  {96 Digital - Remote, UK}
+	{Business Website Renewal}
+  {Sole solution architect, developer and consultant}
+
+\entry{2021}
+	{Userbase - Tokyo, Japan}
+	{Software Engineer}
+	{Expert economy project}
+
+\entry{2019-2021}
+	{Visional - Tokyo, Japan}
+	{Software Engineer}
+	{Software Engineer at Bizreach Customer Product Development Division}
+
+\entry{2016}
+	{ARM - Warwick, UK}
+	{High Performance Computing Tools intern}
+	{Worked on improving a distrobuted debugger tool called DDT}
+
+\section{Education}
+
+\entry{2015--2019}
+	{Bsc Computer Science - 1st Class}
+  {University of St Andrews.}
+  {Awarded a place on the Dean's list for Academic excelence for each of the 4 years of my stay.
+  Dissertation subject: Visualisation of Constrain Solver Search Paths.
+  }
+
+\entry{2013--2015}
+	{A levels}
+	{Penwith College}
+	{4 A levels, including Maths, Computer Science and Chemistry at grade A with Physics at grade B}
+
+\entry{2007-2013}
+	{GCSEs}
+	{Humphry Davy Music College}
+	{Including 2 A*s 3As and 1 B}
+
+
+\section{Languages}
+
+\entry{Machine}
+	{TypeScript, JavaScript, Python, Java, C++, bash/shell, Rust, Kotlin, Markdown, HTML, CSS.}
+	{}
+	{}
+
+\entry{Human}
+	{English, Japanese}
+	{}
+	{}
+
+\end{document}
