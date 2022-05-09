@@ -11,14 +11,16 @@
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.75in]{geometry}
 \usepackage{titling}
 \usepackage[inline]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \titleformat{\part}{\Huge\sf\filcenter}{}{1em}{}
 \titleformat{\section}[hang]{\Large\sf\raggedright}{}{0.5em}{}[{\titlerule[1pt]}]
 \titlespacing{\section}{0}{3pt}{12pt}
-\titleformat{\subsection}{\large\raggedright}{}{0.5em}{}
+\titleformat{\subsection}{\large\raggedright}{}{0em}{}
 \titlespacing{\subsection}{0pt}{7pt}{7pt}
 
 % Your name goes here:
@@ -73,23 +75,29 @@
 
 \vspace{32pt}
 \begin{minipage}[t]{.33\linewidth}
-  \href{mailto:tomorevilo@gmail.com}{\url{tomorevilo@gmail.com}}\\
+  \begin{center}
+    \href{mailto:tomorevilo@gmail.com}{\url{tomorevilo@gmail.com}}\\
+  \end{center}
 \end{minipage}
 \begin{minipage}[t]{.33\linewidth}
-  \href{https://github.com/revilotom}{\url{https://github.com/revilotom}}\\
+  \begin{center}
+    \href{https://github.com/revilotom}{\url{https://github.com/revilotom}}\\
+  \end{center}
 \end{minipage}
 \begin{minipage}[t]{.33\linewidth}
-  \textsf{+44 7726918003}
+  \begin{center}
+    \textsf{+44 7726918003}
+  \end{center}
 \end{minipage}
 
 \textsf
 
-\begin{itemize}
-\item[-] Skilled Software Engineer with over 3 years experience in industry.
-\item[-] Specialised in front-end development (React)
-\item[-] Strong Computer Science fundamentals
-\item[-] Passoinate advocator of functional clean code that is robust and easy to test.
-\item[-] Excels at creating efficient workflows and improving existing systems.
+\begin{itemize}[label=$\textendash$,leftmargin=*]
+\item Skilled Software Engineer with over 3 years experience in industry.
+\item Specialised in front-end development (React)
+\item Strong Computer Science fundamentals
+\item Passoinate advocator of functional clean code that is robust and easy to test.
+\item Excels at creating efficient workflows and improving existing systems.
 \end{itemize}
 
 
@@ -99,7 +107,11 @@
 \entry{2022 \textasciitilde}
   {96 Digital - Remote, UK}
 	{Business Website Renewal}
-  {Sole solution architect, developer and consultant}
+  {
+  Sole solution architect, developer and consultant.\\
+  Marrying the latest in SPA technology with intelegent statically served content, I was able to improve the sites' loading time.
+}
+
 
 \entry{2021}
 	{Userbase - Tokyo, Japan}
@@ -121,7 +133,7 @@
 \entry{2015--2019}
 	{Bsc Computer Science - 1st Class}
   {University of St Andrews.}
-  {Awarded a place on the Dean's list for Academic excelence for each of the 4 years of my stay.
+  {Awarded a place on the Dean's list for Academic excelence for each of the 4 years of my stay.\\
   Dissertation subject: Visualisation of Constrain Solver Search Paths.
   }
 
@@ -140,21 +152,37 @@
 
 \begin{minipage}[t]{.7\textwidth}
 \subsection{Machine}
-\begin{itemize}
-\item[-] TypeScript
-\begin{itemize}
-\item[] React, Nextjs, GatsbyJS, StyledComponents, Recoil, Jest, Cypress...
+\begin{itemize}[label=$\textendash$,leftmargin=*]
+\item HTML5
+\item CSS3
+\item TypeScript
+\begin{itemize}[label=$\ast$,leftmargin=*]
+  \item React, Nextjs, GatsbyJS, StyledComponents, Recoil, Jest, Cypress...
+  \item Using advanced features such creating generic react components.
 \end{itemize}
-\item[-] Java
-\item[-] C++
+\item Java
+\item C++
+\item C++
+\item C++
+\item C++
+\item C++
+\item C++
+\item C++
+\item C++
 \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{.2\textwidth}
 \subsection{Human}
-\begin{itemize}
+\begin{itemize}[leftmargin=*]
 \item[-] Native English
-\item[-] Fluent Japanese
+\item[-] \href{mailto:tomorevilo@gmail.com}{Fluent Japanese \\ (JLPT N1)}
+\item[-] Basic French
 \end{itemize}
 \end{minipage}
+
+\section{Workflow}
+I am most productive working in a linux based envinonment.
+
+
 
 \end{document}
