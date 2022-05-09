@@ -13,13 +13,12 @@
 \usepackage{titlesec}
 \usepackage[margin=1in]{geometry}
 \usepackage{titling}
-%% The 'lf' option for lining figures
-%% The 'sfdefault' option to make the base font sans serif
+\usepackage[inline]{enumitem}
 
 \titleformat{\part}{\Huge\sf\filcenter}{}{1em}{}
 \titleformat{\section}[hang]{\Large\sf\raggedright}{}{0.5em}{}[{\titlerule[1pt]}]
 \titlespacing{\section}{0}{3pt}{12pt}
-\titleformat{\subsection}{\large\bfseries\centering}{}{0em}{\underline}%[\rule{3cm}{.2pt}]
+\titleformat{\subsection}{\large\raggedright}{}{0.5em}{}
 \titlespacing{\subsection}{0pt}{7pt}{7pt}
 
 % Your name goes here:
@@ -55,8 +54,8 @@
 
 \newcommand{\slimentry}[2]{
 
-\begin{minipage}[t]{.15\linewidth}
-\hfill \textsf{#1}
+\begin{minipage}[t]{.1 \linewidth}
+\textsf{#1}\hfill 
 \end{minipage}
 \hfill\vline\hfill
 \begin{minipage}[t]{.80\linewidth}
@@ -68,6 +67,7 @@
 
 
 \begin{document}
+\noindent
 
 \maketitle
 
@@ -85,12 +85,11 @@
 \textsf
 
 \begin{itemize}
-\item Skilled Software Engineer with over 3 years experience in industry.
-\item Specialised in front-end development (React)
-\item Strong Computer Science fundamentals
-\item Passoinate advocator of functional clean code that is robust and easy to test.
-\item Excels at creating efficient workflows and improving existing systems.
-
+\item[-] Skilled Software Engineer with over 3 years experience in industry.
+\item[-] Specialised in front-end development (React)
+\item[-] Strong Computer Science fundamentals
+\item[-] Passoinate advocator of functional clean code that is robust and easy to test.
+\item[-] Excels at creating efficient workflows and improving existing systems.
 \end{itemize}
 
 
@@ -139,14 +138,23 @@
 
 \section{Languages}
 
-\entry{Machine}
-	{TypeScript, JavaScript, Python, Java, C++, bash/shell, Rust, Kotlin, Markdown, HTML, CSS.}
-	{}
-	{}
-
-\entry{Human}
-	{English, Japanese}
-	{}
-	{}
+\begin{minipage}[t]{.7\textwidth}
+\subsection{Machine}
+\begin{itemize}
+\item[-] TypeScript
+\begin{itemize}
+\item[] React, Nextjs, GatsbyJS, StyledComponents, Recoil, Jest, Cypress...
+\end{itemize}
+\item[-] Java
+\item[-] C++
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{.2\textwidth}
+\subsection{Human}
+\begin{itemize}
+\item[-] Native English
+\item[-] Fluent Japanese
+\end{itemize}
+\end{minipage}
 
 \end{document}
