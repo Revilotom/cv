@@ -41,12 +41,14 @@
 \ifthenelse{\isempty{#3}}
 {\slimentry{#1}{#2}}{
 
-\begin{minipage}[t]{.15 \linewidth}
-\hfill \textsf{#1}
+\begin{minipage}[t]{.1 \linewidth}
+\textsf{#1}\hfill 
 \end{minipage}
 \hfill\vline\hfill
 \begin{minipage}[t]{.80\linewidth}
-{\sf#2}\\\textsf{#3} \footnotesize{#4}
+\textsf{#2}\\
+\textbf{#3}\\
+\footnotesize{\textsf#4}
 \end{minipage}\\
 \vspace{.2cm}
 }}
@@ -69,7 +71,7 @@
 
 \maketitle
 
-\section{Basic Info}
+\vspace{32pt}
 \begin{minipage}[t]{.5\linewidth}
 \begin{tabular}{rp{.75\linewidth}}
 	\baselineskip=20pt
@@ -82,9 +84,9 @@
 \end{tabular}
 \end{minipage}
 
-\sf
-\begin{itemize}
+\textsf
 
+\begin{itemize}
 \item Skilled Software Engineer with over 3 years experience in industry.
 \item Specialised in front-end development (React)
 \item Strong Computer Science fundamentals
@@ -92,6 +94,8 @@
 \item Excels at creating efficient workflows and improving existing systems.
 
 \end{itemize}
+
+
 
 \section{Professional Experience}
 
