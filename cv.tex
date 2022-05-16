@@ -19,9 +19,9 @@
 
 \titleformat{\part}{\Huge\sf\filcenter}{}{1em}{}
 \titleformat{\section}[hang]{\Large\sf\raggedright}{}{0.5em}{}[{\titlerule[1pt]}]
-\titlespacing{\section}{0}{3pt}{12pt}
+\titlespacing{\section}{0pt}{3pt}{12pt}
 \titleformat{\subsection}{\large\raggedright}{}{0em}{}
-\titlespacing{\subsection}{0pt}{7pt}{7pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
 
 % Your name goes here:
 \author{Tom Oliver}
@@ -39,76 +39,95 @@
 
 % Making the \entry command
 \newcommand{\entry}[4]{
-\ifthenelse{\isempty{#3}}
-{\slimentry{#1}{#2}}{
-
-\begin{minipage}[t]{.1 \linewidth}
-\textsf{#1}\hfill 
-\end{minipage}
-\hfill\vline\hfill
-\begin{minipage}[t]{.80\linewidth}
-\textsf{#2}\\
-\textbf{#3}\\
-\footnotesize{\textsf#4}
-\end{minipage}\\
-\vspace{.2cm}
-}}
+  \ifthenelse{\isempty{#3}}
+    {\slimentry{#1}{#2}}{
+    \begin{minipage}[t]{.1 \linewidth}
+      \textsf{#1}\hfill 
+    \end{minipage}
+      \hfill\vline\hfill
+    \begin{minipage}[t]{.80\linewidth}
+      \textsf{#2}\\
+      \vspace{-6pt}\\
+      \textbf{#3}\\
+      \vspace{-9pt}\\
+      \footnotesize{\textsf#4}
+    \end{minipage}\\
+    \vspace{.2cm}
+  }
+}
 
 \newcommand{\slimentry}[2]{
-
-\begin{minipage}[t]{.1 \linewidth}
-\textsf{#1}\hfill 
-\end{minipage}
-\hfill\vline\hfill
-\begin{minipage}[t]{.80\linewidth}
-  \textsf{#2}
-\end{minipage}\\
-\vspace{.25cm}
-}% end \entry command definition
-
-
+  \begin{minipage}[t]{.1 \linewidth}
+    \textsf{#1}\hfill 
+  \end{minipage}
+  \hfill\vline\hfill
+  \begin{minipage}[t]{.80\linewidth}
+    \textsf{#2}
+  \end{minipage}\\
+  \vspace{.25cm}
+}
 
 \begin{document}
+\sffamily
 \noindent
-
 \maketitle
 
-\vspace{32pt}
-\begin{minipage}[t]{.33\linewidth}
-  \begin{center}
-    \href{mailto:tomorevilo@gmail.com}{\url{tomorevilo@gmail.com}}\\
-  \end{center}
+\vspace{18pt}
+{
+  \bfseries
+  \begin{minipage}[t]{.33\linewidth}
+    \begin{center}
+      \href{mailto:tomorevilo@gmail.com}{\url{tomorevilo@gmail.com}}\\
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[t]{.33\linewidth}
+    \begin{center}
+      \href{https://github.com/revilotom}{\url{https://github.com/revilotom}}\\
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[t]{.33\linewidth}
+    \begin{center}
+      \textsf{+44 7726918003}
+    \end{center}
+  \end{minipage}
+}
+
+\begin{minipage}[t]{.45\linewidth}
+  \begin{itemize}[label=\textendash,leftmargin=*]
+    \item Skilled Software Engineer with over 3 years experience in industry.
+    \item Specialised in front-end development (React).
+    \item Strong Computer Science fundamentals.
+    \item Passoinate advocator of functional clean code that is robust and easy to test.
+    \item Excels at creating efficient workflows and improving existing systems.
+  \end{itemize}
 \end{minipage}
-\begin{minipage}[t]{.33\linewidth}
-  \begin{center}
-    \href{https://github.com/revilotom}{\url{https://github.com/revilotom}}\\
-  \end{center}
+\hfill\hfill
+\begin{minipage}[t]{.45\linewidth}
+  \vspace{-10pt}
+  \subsection{Personal Projects}
+  \begin{itemize}[label=\textendash,leftmargin=18pt]
+    \item Japanese pitch accent dictionary
+    \item Programming blog
+  \end{itemize}
+  % \begin{itemize}[label=\textendash,leftmargin=*]
+  %   \item Experience with fullstack
+  %   \item Experience in designing and implementing CI/CD
+  %   \item Strong communication skills.
+  %   \item Experience working in an extreme programming environment.
+  %   \item Experience with TDD.
+  %   \item Experienced remote worker.
+  % \end{itemize}
 \end{minipage}
-\begin{minipage}[t]{.33\linewidth}
-  \begin{center}
-    \textsf{+44 7726918003}
-  \end{center}
-\end{minipage}
 
-\textsf
-
-\begin{itemize}[label=$\textendash$,leftmargin=*]
-\item Skilled Software Engineer with over 3 years experience in industry.
-\item Specialised in front-end development (React)
-\item Strong Computer Science fundamentals
-\item Passoinate advocator of functional clean code that is robust and easy to test.
-\item Excels at creating efficient workflows and improving existing systems.
-\end{itemize}
-
-
+\vspace{12pt}
 
 \section{Professional Experience}
 
-\entry{2022 \textasciitilde}
+\entry{2022 - now}
   {96 Digital - Remote, UK}
 	{Business Website Renewal}
   {
-  Sole solution architect, developer and consultant.\\
+  Solution architect, developer and consultant.\\
   Marrying the latest in SPA technology with intelegent statically served content, I was able to improve the sites' loading time.
 }
 
@@ -151,38 +170,39 @@
 \section{Languages}
 
 \begin{minipage}[t]{.7\textwidth}
-\subsection{Machine}
-\begin{itemize}[label=$\textendash$,leftmargin=*]
-\item HTML5
-\item CSS3
-\item TypeScript
-\begin{itemize}[label=$\ast$,leftmargin=*]
-  \item React, Nextjs, GatsbyJS, StyledComponents, Recoil, Jest, Cypress...
-  \item Using advanced features such creating generic react components.
-\end{itemize}
-\item Java
-\item C++
-\item C++
-\item C++
-\item C++
-\item C++
-\item C++
-\item C++
-\item C++
-\end{itemize}
+  \subsection{Machine}
+  \begin{itemize}[label=\textendash,leftmargin=*]
+    \item HTML5
+    \item CSS3
+    \item TypeScript
+    \begin{itemize}[label=$\ast$,leftmargin=*]
+      \item React, Nextjs, GatsbyJS, StyledComponents, Recoil, Jest, Cypress...
+      \item Using advanced features such creating generic react components.
+      \end{itemize}
+      \item Java
+      \item C++
+      \item C++
+      \item C++
+      \item C++
+      \item C++
+      \item C++
+      \item C++
+      \item C++
+    \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{.2\textwidth}
-\subsection{Human}
-\begin{itemize}[leftmargin=*]
-\item[-] Native English
-\item[-] \href{mailto:tomorevilo@gmail.com}{Fluent Japanese \\ (JLPT N1)}
-\item[-] Basic French
-\end{itemize}
+    \subsection{Human}
+  \begin{itemize}[leftmargin=*]
+    \item[-] Native English
+    \item[-] \href{https://en.wikipedia.org/wiki/Japanese-Language_Proficiency_Test}{Fluent Japanese \\ (JLPT N1)}
+    \item[-] Basic French
+    \end{itemize}
 \end{minipage}
 
 \section{Workflow}
-I am most productive working in a linux based envinonment.
-
-
+\noindent
+I am most productive working in a linux based envinonment.\\
+Tiling window manager\\
+vim\\
 
 \end{document}
