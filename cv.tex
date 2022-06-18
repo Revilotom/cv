@@ -20,8 +20,10 @@
 \titleformat{\part}{\Huge\sf\filcenter}{}{1em}{}
 \titleformat{\section}[hang]{\Large\sf\raggedright}{}{0.5em}{}[{\titlerule[1pt]}]
 \titlespacing{\section}{0pt}{3pt}{12pt}
-\titleformat{\subsection}{\large\raggedright}{}{0em}{}
-\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titleformat{\subsection}{\large\raggedright}{}{0.5em}{}[{\titlerule[1pt]}]
+\titlespacing{\subsection}{0pt}{0pt}{5pt}
+\titleformat{\subsubsection}{\large\raggedright\bfseries}{}{0.5em}{}
+\titlespacing{\subsubsection}{0pt}{0pt}{10pt}
 
 % Your name goes here:
 \author{Tom Oliver}
@@ -104,7 +106,7 @@
 \hfill\hfill
 \begin{minipage}[t]{.45\linewidth}
   \vspace{-10pt}
-  \section{Recent Personal Projects}
+  \subsection{Recent Personal Projects}
   \footnotesize{
     \begin{itemize}[label={},leftmargin=*]
       \item \href{https://www.stashyourchanges.vercel.app.com}{Personal Programming Blog} (Work in progress)
@@ -220,16 +222,8 @@
 \section{Languages}
 
 \begin{minipage}[t]{.7\textwidth}
-  \subsection{Machine}
+  \subsubsection{Machine}
   \begin{itemize}[label={\emph},leftmargin=*]
-    \item \emph{HTML5}
-    \begin{itemize}[label=\textendash]
-      \item Accessability  
-      \begin{itemize}[label=$\ast$, leftmargin=*]
-        \item Aria attributes / roles
-      \end{itemize}
-    \end{itemize}
-    \item \emph{CSS3}
     \item \emph{TypeScript} 
     \begin{itemize}[label=\textendash]
       \item React
@@ -239,22 +233,43 @@
           \item StyledComponents, Emotion
           \item Jest, Cypress, Enzyme
         \end{itemize}
-      \item Using advanced features such creating generic react components.
-      \item Experienct writing functional code using the fp-ts library.
+      \item Generics, including react components.
+      \item Experience writing functional code using the \href{https://github.com/gcanti/fp-ts}{fp-ts} library.
+      \item Open API
+      \begin{itemize}[label=$\ast$, leftmargin=*]
+        \item Creating OpenAPI Schemas
+        \item Using Generated OpenAPI Functions
+      \end{itemize}
     \end{itemize}
-    \item Java
-    \item C++
-    \item C++
-    \item C++
-    \item C++
-    \item C++
-    \item C++
-    \item C++
-    \item C++
+    \item \emph{Databases} 
+    \begin{itemize}[label=\textendash]
+      \item \emph{MySQL} 
+      \item \emph{PostgreSQL} 
+    \end{itemize}
+    \item \emph{Infrastructure} 
+    \begin{itemize}[label=\textendash]
+      \item \emph{AWS} 
+      \begin{itemize}[label=$\ast$, leftmargin=*]
+        \item S3
+        \item RDS
+      \end{itemize}
+    \end{itemize}
+    \item \emph{Other Proficient Languages} 
+    \begin{itemize}[label=\textendash]
+      \item Python3
+      \item Rust
+      \item Kotlin
+      \item Haskell
+    \end{itemize}
+    \item \emph{Continueos Integration} 
+    \begin{itemize}[label=\textendash]
+      \item \emph{Circle CI} 
+      \item \emph{Github Actions} 
+    \end{itemize}
   \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{.2\textwidth}
-    \subsection{Human}
+    \subsubsection{Human}
     \begin{itemize}[label={}, leftmargin=*]
       \item \emph{English}
       \begin{itemize}[label=\textendash]
