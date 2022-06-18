@@ -6,7 +6,7 @@
 \usepackage[sfdefault,lf]{carlito}
 \usepackage{metalogo}
 \usepackage{xifthen}
-\usepackage[colorlinks=true,urlcolor=Blue]{hyperref}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
 \urlstyle{sf}
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
@@ -41,11 +41,11 @@
 \newcommand{\entry}[4]{
   \ifthenelse{\isempty{#3}}
     {\slimentry{#1}{#2}}{
-    \begin{minipage}[t]{.1 \linewidth}
+    \begin{minipage}[t]{.09 \linewidth}
       \textsf{#1}\hfill 
     \end{minipage}
       \hfill\vline\hfill
-    \begin{minipage}[t]{.80\linewidth}
+    \begin{minipage}[t]{.81\linewidth}
       \textsf{#2}\\
       \vspace{-6pt}\\
       \textbf{#3}\\
@@ -104,11 +104,21 @@
 \hfill\hfill
 \begin{minipage}[t]{.45\linewidth}
   \vspace{-10pt}
-  \subsection{Personal Projects}
-  \begin{itemize}[label=\textendash,leftmargin=18pt]
-    \item Japanese pitch accent dictionary
-    \item Programming blog
-  \end{itemize}
+  \section{Recent Personal Projects}
+  \footnotesize{
+    \begin{itemize}[label={},leftmargin=*]
+      \item \href{https://www.stashyourchanges.vercel.app.com}{Personal Programming Blog} (Work in progress)
+      \begin{itemize}[label=\textendash]
+        \item Uses MDX for blog articles
+        \item Entirely SSG 
+      \end{itemize}
+      \item \href{https://www.misosmart.com}{Japanese Pitch Accent Dictionary}
+      \begin{itemize}[label=\textendash]
+        \item Serverless architecture
+        \item Uses a combinatination of statically rendered and client only pages
+      \end{itemize}
+    \end{itemize}
+  }
   % \begin{itemize}[label=\textendash,leftmargin=*]
   %   \item Experience with fullstack
   %   \item Experience in designing and implementing CI/CD
@@ -123,24 +133,64 @@
 
 \section{Professional Experience}
 
-\entry{2022 - now}
+\entry{2022}
   {96 Digital - Remote, UK}
-	{Business Website Renewal}
+	{Independent Developer, Consultant}
   {
-  Solution architect, developer and consultant.\\
-  Marrying the latest in SPA technology with intelegent statically served content, I was able to improve the sites' loading time.
+  Freelance project to develop a business website for 96digital ltd. \\
+  Marrying the latest in SPA technology with intelegent statically served content, I created a \href{https://96digital.com}{bespoke experience} for the client.
+  \begin{itemize}[label={},leftmargin=*]
+    \item \emph{Accessability}
+    \begin{itemize}[label=\textendash]
+      \item  I implemented an unconvential design while also taking into account the needs of all users.
+      \item  Users of the site can reposition the menu to any of the four corners of the screen to better suit their pereference. 
+      \item  The site can be navigated solely using a screen reader to support those users who are visually impaired.
+      \item  Keyboard only users can also experience the site using tab navigation.
+    \end{itemize}
+    \item \emph{Performance}
+    \begin{itemize}[label=\textendash]
+      \item Although visually striking and rich, the site does not sacrifice any performance to achieve this.
+      \item I achieved a performance score of: mobile: 93, desktop: 100 - according to \href{https://pagespeed.web.dev/}{pagespeed insights}. 
+    \end{itemize}
+  \end{itemize}
 }
 
 
 \entry{2021}
-	{Userbase - Tokyo, Japan}
-	{Software Engineer}
-	{Expert economy project}
+	{Userbase - Remote, Tokyo - Japan}
+	{Full Stack Software Engineer}
+	{ 
+    Working as part of a extreme programming team I helped develop a buisness to customer \href{https://newspicks.expert/}{product} for the expert economy. 
+    
+  \begin{itemize}[label={},leftmargin=*]
+    \item \emph{Software development practices}
+    \begin{itemize}[label=\textendash]
+      \item Top down test driven development, i.e  e2e -> integration -> unit
+      \item 100\% Pair programming environment
+      \item Development team lead operations
+    \end{itemize}
+  \end{itemize}
+
+  }
 
 \entry{2019-2021}
-	{Visional - Tokyo, Japan}
-	{Software Engineer}
-	{Software Engineer at Bizreach Customer Product Development Division}
+	{Visional - Remote, Tokyo - Japan}
+	{Full Stack Software Engineer}
+	{
+  Software Engineer at Bizreach Customer Product Development Division\\
+  High class job switching service
+
+  \begin{itemize}[label={},leftmargin=*]
+    \item \emph{Responsible for developing the front end of the \href{https://www.bizreach.jp/premium}{Bizreach Premium Career platform }}
+    \begin{itemize}[label=\textendash]
+      \item Choosing the technology stack
+      \item Time management 
+      \item Front-end "owner"
+      \item Discussing requirements with the product planning divison
+    \end{itemize}
+  \end{itemize}
+
+}
 
 \entry{2016}
 	{ARM - Warwick, UK}
@@ -151,51 +201,69 @@
 
 \entry{2015--2019}
 	{Bsc Computer Science - 1st Class}
-  {University of St Andrews.}
+  {University of St Andrews}
   {Awarded a place on the Dean's list for Academic excelence for each of the 4 years of my stay.\\
   Dissertation subject: Visualisation of Constrain Solver Search Paths.
   }
 
-\entry{2013--2015}
-	{A levels}
-	{Penwith College}
-	{4 A levels, including Maths, Computer Science and Chemistry at grade A with Physics at grade B}
+% \entry{2013--2015}
+% 	{A levels}
+% 	{Penwith College}
+% 	{4 A levels, including Maths, Computer Science and Chemistry at grade A with Physics at grade B}
 
-\entry{2007-2013}
-	{GCSEs}
-	{Humphry Davy Music College}
-	{Including 2 A*s 3As and 1 B}
+% \entry{2007-2013}
+% 	{GCSEs}
+% 	{Humphry Davy Music College}
+% 	{Including 2 A*s 3As and 1 B}
 
 
 \section{Languages}
 
 \begin{minipage}[t]{.7\textwidth}
   \subsection{Machine}
-  \begin{itemize}[label=\textendash,leftmargin=*]
-    \item HTML5
-    \item CSS3
-    \item TypeScript
-    \begin{itemize}[label=$\ast$,leftmargin=*]
-      \item React, Nextjs, GatsbyJS, StyledComponents, Recoil, Jest, Cypress...
-      \item Using advanced features such creating generic react components.
+  \begin{itemize}[label={\emph},leftmargin=*]
+    \item \emph{HTML5}
+    \begin{itemize}[label=\textendash]
+      \item Accessability  
+      \begin{itemize}[label=$\ast$, leftmargin=*]
+        \item Aria attributes / roles
       \end{itemize}
-      \item Java
-      \item C++
-      \item C++
-      \item C++
-      \item C++
-      \item C++
-      \item C++
-      \item C++
-      \item C++
     \end{itemize}
+    \item \emph{CSS3}
+    \item \emph{TypeScript} 
+    \begin{itemize}[label=\textendash]
+      \item React
+        \begin{itemize}[label=$\ast$, leftmargin=*]
+          \item Nextjs, GatsbyJS, Create React App
+          \item Recoil, ReactQuery
+          \item StyledComponents, Emotion
+          \item Jest, Cypress, Enzyme
+        \end{itemize}
+      \item Using advanced features such creating generic react components.
+      \item Experienct writing functional code using the fp-ts library.
+    \end{itemize}
+    \item Java
+    \item C++
+    \item C++
+    \item C++
+    \item C++
+    \item C++
+    \item C++
+    \item C++
+    \item C++
+  \end{itemize}
 \end{minipage}
 \begin{minipage}[t]{.2\textwidth}
     \subsection{Human}
-  \begin{itemize}[leftmargin=*]
-    \item[-] Native English
-    \item[-] \href{https://en.wikipedia.org/wiki/Japanese-Language_Proficiency_Test}{Fluent Japanese \\ (JLPT N1)}
-    \item[-] Basic French
+    \begin{itemize}[label={}, leftmargin=*]
+      \item \emph{English}
+      \begin{itemize}[label=\textendash]
+        \item Native
+      \end{itemize}
+      \item \emph{Japanese}
+      \begin{itemize}[label=\textendash]
+        \item {\href{https://en.wikipedia.org/wiki/Japanese-Language_Proficiency_Test}{Fluent (JLPT N1)}}
+      \end{itemize}
     \end{itemize}
 \end{minipage}
 
