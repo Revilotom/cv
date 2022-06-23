@@ -1,5 +1,6 @@
 % xelatex
 \documentclass{article}
+\usepackage{fancyhdr}
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec}
 \usepackage[T1]{fontenc}
@@ -11,7 +12,7 @@
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{titlesec}
-\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{titling}
 \usepackage[inline]{enumitem}
 \usepackage{amsmath}
@@ -30,6 +31,7 @@
 
 % Update date set to last compile:
 \date{\today}
+\renewcommand{\footnotesize}{\fontsize{9pt}{11pt}\selectfont}
 
 % Custom title command.
 \renewcommand{\maketitle}{
@@ -73,6 +75,9 @@
 \sffamily
 \noindent
 \maketitle
+\pagestyle{empty}
+\rhead{}
+\cfoot{}
 
 \vspace{18pt}
 {
@@ -120,7 +125,6 @@
         \item Nextjs
         \item MySQL
         \item Serverless architecture
-        \item Uses a combination of statically and client rendered pages
       \end{itemize}
     \end{itemize}
   }
@@ -309,7 +313,6 @@
     \end{itemize}
   \end{itemize}
 \end{minipage}
-\\
 \subsubsection{Human}
 \begin{minipage}[t]{.5\textwidth}
   \begin{itemize}[label={}, leftmargin=*]
@@ -327,7 +330,6 @@
     \end{itemize}
   \end{itemize}
 \end{minipage}
-\\
 \\
 
 \section{Preferred Tools}
